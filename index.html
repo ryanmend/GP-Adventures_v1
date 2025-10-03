@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP Adventures - 2026 Headliners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            background-color: #fff;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #000;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .cta-button {
+            background-color: #e8e5ff;
+            padding: 0.75rem 6rem;
+            border-radius: 8px;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            padding: 3rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            font-weight: 300;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section h2 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #000;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 4rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            color: #666;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .footer-column h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column ul li a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 1024px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem 2rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GP Adventures</div>
+        <nav>
+            <a href="#contact">Contact</a>
+            <a href="#vip">VIP</a>
+            <a href="#" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>2026 Headliners</h1>
+        <p>Pick from our recommended destinations</p>
+    </section>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1583428864767-e15da8d5c9f0?w=600&h=800&fit=crop" alt="Silverstone">
+            <div class="card-content">
+                <div class="card-title">Silverstone</div>
+                <div class="card-subtitle">United Kingdom</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32ce4e97d?w=600&h=800&fit=crop" alt="SPA">
+            <div class="card-content">
+                <div class="card-title">SPA</div>
+                <div class="card-subtitle">Francorchamps, Belgium</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&h=800&fit=crop" alt="Monaco">
+            <div class="card-content">
+                <div class="card-title">Monaco</div>
+                <div class="card-subtitle">Principality of Monaco</div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&h=800&fit=crop" alt="Singapore">
+            <div class="card-content">
+                <div class="card-title">Singapore</div>
+                <div class="card-subtitle">Republic of Singapore</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <p>Your favourite track not in the list?</p>
+        <h2>See the full calendar</h2>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Namedly</h3>
+                <p>Descriptive line about what your company does.</p>
+                <div class="social-icons">
+                    <a href="#">📷</a>
+                    <a href="#">💼</a>
+                    <a href="#">✕</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Core features</a></li>
+                    <li><a href="#">Pro experience</a></li>
+                    <li><a href="#">Integrations</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Learn more</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case studies</a></li>
+                    <li><a href="#">Customer stories</a></li>
+                    <li><a href="#">Best practices</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
