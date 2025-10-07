@@ -1,285 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GP Adventures - Contact Us</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 4rem;
-            background-color: #fff;
-        }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem;
+        background-color: #fff;
+      }
 
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #000;
-        }
+      .logo {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #000;
+      }
 
-        nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
+      nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
 
-        nav a {
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-        }
+      nav a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+      }
 
-        .cta-button {
-            background-color: #e8e5ff;
-            padding: 0.75rem 6rem;
-            border-radius: 8px;
-            color: #000;
-            font-weight: 500;
-        }
+      .cta-button {
+        background-color: #e8e5ff;
+        padding: 0.75rem 6rem;
+        border-radius: 8px;
+        color: #000;
+        font-weight: 500;
+      }
 
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background-color: #fff;
-        }
+      .hero {
+        text-align: center;
+        padding: 5rem 2rem;
+        background-color: #fff;
+      }
 
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: #000;
-        }
+      .hero h1 {
+        font-size: 4.5rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        color: #000;
+      }
 
-        .hero p {
-            font-size: 1.5rem;
-            color: #666;
-        }
+      .hero p {
+        font-size: 1.5rem;
+        color: #666;
+      }
 
-        .content-section {
-            background-color: #fff;
-            padding: 5rem 4rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+      .content-section {
+        background-color: #fff;
+        padding: 5rem 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
 
+      .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+      }
+
+      .content-block h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: #000;
+        margin-bottom: 1.5rem;
+      }
+
+      .content-block p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 1.25rem;
+      }
+
+      footer {
+        background-color: #fff;
+        padding: 4rem;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 4rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .footer-brand h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-brand p {
+        color: #666;
+        font-size: 0.95rem;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .social-icons a {
+        color: #666;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      .footer-column h4 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 0.75rem;
+      }
+
+      .footer-column ul li a {
+        color: #666;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .footer-column ul li a:hover {
+        color: #000;
+      }
+
+      @media (max-width: 1024px) {
         .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-        }
-
-        .content-block h2 {
-            font-size: 2rem;
-            font-weight: 900;
-            color: #000;
-            margin-bottom: 1.5rem;
-        }
-
-        .content-block p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 1.25rem;
-        }
-
-        footer {
-            background-color: #fff;
-            padding: 4rem;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 4rem;
+          grid-template-columns: 1fr;
+          gap: 3rem;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        header {
+          padding: 1.5rem 2rem;
         }
 
-        .footer-brand h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+        .logo {
+          font-size: 2rem;
         }
 
-        .footer-brand p {
-            color: #666;
-            font-size: 0.95rem;
+        .hero h1 {
+          font-size: 3rem;
         }
 
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+        .hero p {
+          font-size: 1.2rem;
         }
 
-        .social-icons a {
-            color: #666;
-            font-size: 1.5rem;
-            text-decoration: none;
+        .content-section {
+          padding: 3rem 2rem;
         }
 
-        .footer-column h4 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            font-size: 1rem;
+        .footer-content {
+          grid-template-columns: 1fr;
         }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-column ul li a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .footer-column ul li a:hover {
-            color: #000;
-        }
-
-        @media (max-width: 1024px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 1.5rem 2rem;
-            }
-
-            .logo {
-                font-size: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .content-section {
-                padding: 3rem 2rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="https://ryanmend.github.io/GP-Adventures_v1/" style="text-decoration: none;">
+      <a href="https://ryanmend.github.io/GP-Adventures_v1/" style="text-decoration: none;">
         <div class="logo">GP Adventures</div>
-        </a>
-        <nav>
-            <a href="https://ryanmend.github.io/GP-Adventures_v1/contact.html">Contact</a>
-            <a href="https://ryanmend.github.io/GP-Adventures_v1/vip.html">VIP</a>
-            <a href="#" class="cta-button">Get Started</a>
-        </nav>
+      </a>
+      <nav>
+        <a href="https://ryanmend.github.io/GP-Adventures_v1/contact.html">Contact</a>
+        <a href="https://ryanmend.github.io/GP-Adventures_v1/vip.html">VIP</a>
+        <a href="#" class="cta-button">Get Started</a>
+      </nav>
     </header>
-
     <section class="hero">
-        <h1>About Us</h1>
-        <p>We're a phone call away</p>
+      <h1>About Us</h1>
+      <p>We're a phone call away</p>
     </section>
-
     <section class="content-section">
-        <div class="content-grid">
-            <div class="content-block">
-                <h2>Our Mission and Team</h2>
-                <p>Since our establishment in 2025, we've helped over 5,000 racing enthusiasts experience the thrill of Formula 1 at circuits around the world, from the glamour of Monaco to the high-speed excitement of Monza.</p>
-            </div>
-               <p>Our team consists of passionate F1 enthusiasts with decades of combined experience in luxury travel and motorsport. We understand the intricacies of each circuit, the best viewing spots, and how to create memories that last a lifetime.</p>
-            </div>
-
-            <div class="content-block">
-    <h2>Contact Us</h2>
-    <div>
-        <b>Email:</b> <p>info@gpadventures.com</p><br>
-        <b>Phone:</b> <p>+1 (555) 123-4567</p><br>
-        <b>Address:</b> <p>123 Racing Boulevard, Suite 456</p><br>
-        <b>Monaco, MC 98000</b> <p></p><br><br>
-
-        <b>Business Hours:</b><br>
-        <b>Monday - Friday:</b> <p>9:00 AM - 6:00 PM (CET)</p><br>
-        <b>Saturday:</b> <p>10:00 AM - 4:00 PM (CET)</p><br>
-        <b>Sunday:</b> <p>Closed</p><br><br>
-
-        *Race weekend support available 24/7
-    </div>
-</div>
-
+      <div class="content-grid">
+        <div class="content-block">
+          <h2>Our Mission and Team</h2>
+          <p>Since our establishment in 2025, we've helped over 5,000 racing enthusiasts experience the thrill of Formula 1 at circuits around the world, from the glamour of Monaco to the high-speed excitement of Monza.</p>
         </div>
+        <p>Our team consists of passionate F1 enthusiasts with decades of combined experience in luxury travel and motorsport. We understand the intricacies of each circuit, the best viewing spots, and how to create memories that last a lifetime.</p>
+      </div>
+      <div class="content-block">
+        <h2>Contact Us</h2>
+        <b>Email:</b>
+        <p>info@gpadventures.com</p>
+        <br>
+        <b>Phone:</b>
+        <p>+1 (555) 123-4567</p>
+        <br>
+        <b>Address:</b>
+        <p>123 Racing Boulevard, Suite 456</p>
+        <br>
+        <b>Monaco, MC 98000</b>
+        <p></p>
+        <br>
+        <br>
+        <b>Business Hours:</b>
+        <br>
+        <b>Monday - Friday:</b>
+        <p>9:00 AM - 6:00 PM (CET)</p>
+        <br>
+        <b>Saturday:</b>
+        <p>10:00 AM - 4:00 PM (CET)</p>
+        <br>
+        <b>Sunday:</b>
+        <p>Closed</p>
+        <br>
+        <br> *Race weekend support available 24/7
+      </div>
+      </div>
     </section>
-
     <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>GP Adventures</h3>
-                <p>Your destination for touching grass (near a racetrack).</p>
-                <div class="social-icons">
-                    <a href="#">📷</a>
-                    <a href="#">💼</a>
-                    <a href="#">✕</a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h4>Features</h4>
-                <ul>
-                    <li><a href="#">Core features</a></li>
-                    <li><a href="#">Pro experience</a></li>
-                    <li><a href="#">Integrations</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Learn more</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Case studies</a></li>
-                    <li><a href="#">Customer stories</a></li>
-                    <li><a href="#">Best practices</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Legal</a></li>
-                </ul>
-            </div>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>GP Adventures</h3>
+          <p>Your destination for touching grass (near a racetrack).</p>
+          <div class="social-icons">
+            <a href="#">📷</a>
+            <a href="#">💼</a>
+            <a href="#">✕</a>
+          </div>
         </div>
+        <div class="footer-column">
+          <h4>Features</h4>
+          <ul>
+            <li>
+              <a href="#">Core features</a>
+            </li>
+            <li>
+              <a href="#">Pro experience</a>
+            </li>
+            <li>
+              <a href="#">Integrations</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Learn more</h4>
+          <ul>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Case studies</a>
+            </li>
+            <li>
+              <a href="#">Customer stories</a>
+            </li>
+            <li>
+              <a href="#">Best practices</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Legal</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
